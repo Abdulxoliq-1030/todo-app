@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #3c87ff;
+  overflow: hidden;
+}
+
+.wrapper {
+  background: #fff;
+  max-width: 405px;
+  margin: 135px auto;
+  border-radius: 7px;
+  padding: 28px 0;
+}
+
+.task-input {
+  height: 52px;
+  padding: 0 25px;
+  position: relative;
+}
+
+.task-input i {
+  position: absolute;
+  top: 50%;
+  color: #918e8e;
+  transform: translate(17px, -50%);
+}
+
+.task-input input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding: 0 20px 0 53px;
+}
+
+.task-input input::placeholder {
+  color: #bfbfbf;
+}
+
+.controls,
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  padding: 18px 25px;
+  border-bottom: 1px solid #ccc;
+}
+
+.filters span {
+  margin: 0 8px;
+  cursor: pointer;
+  font-size: 17px;
+  user-select: none;
+}
+
+.filters span:first-child {
+  margin-left: 0;
+}
+
+.filters span.active {
+  color: #3c87ff;
+}
+
+.controls .clear-btn {
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 7px 13px;
+  border-radius: 4px;
+  background: #3c87ff;
+}
+
+.task-box {
+  margin: 20px 25px;
+}
+
+.task-box .task {
+  list-style: none;
+  font-size: 17px;
+  margin-bottom: 18px;
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.task-box .task:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.task label {
+  display: flex;
+}
+
+.task label p.checked {
+  text-decoration: line-through;
+}
+
+.task label input {
+  margin-top: 6px;
+  margin-right: 12px;
+}
+
+.task .settings {
+  cursor: pointer;
+  position: relative;
+}
+
+.settings .task-menu {
+  position: absolute;
+  background: #fff;
+  padding: 5px 0;
+  right: -5px;
+  bottom: -65px;
+  z-index: 2;
+  transform: scale(0);
+  border-radius: 5px;
+  transform-origin: top right;
+  transition: transform 0.2s ease;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.settings .task-menu.show {
+  transform: scale(1);
+}
+
+.task-menu li {
+  height: 25px;
+  font-size: 16px;
+  padding: 17px 15px;
+  margin-bottom: 2px;
+  justify-content: flex-start;
+}
+
+.task-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.task-menu li:hover {
+  background: #f5f5f5;
+}
+
+.task-menu li i {
+  padding-right: 8px;
+}
